@@ -1,0 +1,10 @@
+<script type="text/javascript">
+    var campus_background = ["<%= asset_path "campus/Ewha_Womans.jpg" %>",];
+        
+    var campus_name = ["이화여자대학교",];
+        
+    console.log(campus_background)
+    var random_num = Math.floor(Math.random() * campus_background.length)
+    document.getElementsByClassName('campus_background')[0].style.backgroundImage = 'url(' +campus_background[random_num] + ')';
+    document.getElementsByClassName('campus_name')[0].innerHTML = campus_name[random_num];
+</script>

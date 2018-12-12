@@ -1,0 +1,31 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tags {
+    width: 95%;
+    margin: 40px auto;
+    border-radius: 18px;
+    padding: 10px 20px;
+    margin-bottom: 0px;
+}
+
+.tag {
+    padding: 5px;
+    margin: 5px;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #8a7c7c5e;
+    color: white;
+    font-size: 10px;
+}
+
+.tag.select {
+    font-weight: bold;
+    background-color: #8a7c7c;
+}
+
+.contents {
+    
+}

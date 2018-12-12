@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @promotion.title %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @promotion.url %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @promotion.content %>
+</p>
+
+<p>
+  <strong>Univ hashtag:</strong>
+  <%= render_with_hashtags(@promotion.univ_hashtag) %>
+</p>
+
+<%= link_to 'Edit', edit_promotion_path(@promotion) %>
+<%= link_to 'Back', promotions_path %>

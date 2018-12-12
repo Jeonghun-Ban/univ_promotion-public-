@@ -1,0 +1,71 @@
+<!-- 메인 배경 with 검색창 -->
+<div class="campus_background main_background_with_img" style="background-image: url('/img/wallpaper.jpg'); background-size: cover">
+    <div class="main_background-black">
+        <div class="container">
+            <div class="row" id="scrollable-dropdown-menu" style="margin-top: 150px; justify-content: center">
+                <div class="col-9 col-sm-10 col-md-4" style="text-align: center;">
+                  <input id="input_form" class="typeahead input_noborder_white" type="text" placeholder="대학교 검색" style="width: 100%; color: white;">
+  
+                  <!-- Typed.js List -->
+                  <span id="main_typed" class="typeahead input_noborder_white tt-input" 
+                  style="width: 100%; color: white; position: relative; vertical-align: top; background-color: transparent;"></span>
+  
+                  <div id="typed_string">
+                    <p>서울대학교</p>
+                    <p>이화여자대학교</p>
+                    <p>부산대학교</p>
+                    <p>한국외국어대학교</p>
+                    <p>숙명여자대학교</p>
+                    <p>한국항공대학교</p>
+                    <p>성균관대학교</p>
+                    <p>한양대학교</p>
+                    <p>강원대학교</p>
+                  </div>
+                </div>
+                <div class="col-3 col-sm-2 col-md-1" style="margin-top: 5px; text-align: left;"><i class="fas fa-search" style="color: white; font-size: 40px;"></i></div>
+                <div class="offset-md-2 col-12 col-sm-12 col-md-7" style="margin-top: 5px; text-align: left; color: white;">
+                    <small id="info">대학 검색 후 검색결과 클릭</small>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block text_on_image campus_name">이화여자대학교</div>
+    </div>
+    <a
+    href="#content"
+    data-offset="100"
+    class="one-page-arrow"
+    style="color: #fff"
+    ><i class="icon-angle-down infinite animated fadeInDown"></i
+  ></a>
+</div>
+
+<div style="margin-bottom: 50px;">
+  <h2 style="margin-top:40px; text-align:center;">대학생이면 누구나!</h2>
+  <p style="text-align:center; margin:0;">우린 젊으니까!</p>
+  <p style="text-align:center;">#텅_빈_지갑</p>
+    <div class="tags"></div>
+    <div class="container" id="contents">
+      <% Promotion.all.each do |x| %>
+        <a href="<%= x.url %>" tags="<%= x.univ_hashtag %>" style="text-decoration: none;" target="_blank">
+          <img src="<%= asset_path "main_logo/mini_#{x.thumb}.png" %>">
+        </a>
+      <% end %>
+    </div>
+</div>
+
+<%# 롤링배너 제어 %>
+<%= render 'homes/render/imageFadeOut' %>
+
+<%# 랜덤 메인 배경 %>
+<%# <%= render 'homes/render/random_background' %> %>
+
+<%# Typeahead Javascript %>
+<%= render 'homes/render/typeahead' %>
+
+<%# 해당 View에서만 작동되는 CSS 모음 %>
+<%= render 'homes/render/style' %>
+
+<%# typed 제어 javascript %>
+<%= render 'homes/render/typedjs' %>
+
+<%= render 'homes/render/tagjs' %>

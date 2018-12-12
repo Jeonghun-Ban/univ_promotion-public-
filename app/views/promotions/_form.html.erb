@@ -1,0 +1,37 @@
+<%= form_with(model: promotion, local: true) do |form| %>
+  <% if promotion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(promotion.errors.count, "error") %> prohibited this promotion from being saved:</h2>
+
+      <ul>
+      <% promotion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :promotion_title %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :promotion_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :promotion_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :univ_hashtag %>
+    <%= form.text_field :univ_hashtag, id: :promotion_univ_hashtag %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Univs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Univ name kor</th>
+      <th>Univ name eng</th>
+      <th>Content</th>
+      <th>Ms office</th>
+      <th>Naver music</th>
+      <th>Aws credit</th>
+      <th>Github</th>
+      <th>Job planet</th>
+      <th>Win10</th>
+      <th>Inflearn</th>
+      <th>Edwith</th>
+      <th>Goorm ide</th>
+      <th>Etc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @univs.each do |univ| %>
+      <tr>
+        <td><%= univ.univ_name_kor %></td>
+        <td><%= univ.univ_name_eng %></td>
+        <td><%= univ.content %></td>
+        <td><%= univ.ms_office %></td>
+        <td><%= univ.naver_music %></td>
+        <td><%= univ.aws_credit_normal %></td>
+        <td><%= univ.github %></td>
+        <td><%= univ.job_planet %></td>
+        <td><%= univ.win10 %></td>
+        <td><%= univ.inflearn %></td>
+        <td><%= univ.edwith %></td>
+        <td><%= univ.goorm_ide %></td>
+        <td><%= univ.etc %></td>
+        <td><%= link_to 'Show', univ %></td>
+        <td><%= link_to 'Edit', edit_univ_path(univ) %></td>
+        <td><%= link_to 'Destroy', univ, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Univ', new_univ_path %>
