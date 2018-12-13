@@ -51,7 +51,7 @@
     ```
     git init
     rm -rf README.md
-    git remote add origin https://github.com/kbs4674/univ_promotion
+    git remote add origin https://github.com/kbs4674/univ_promotion-public-
     git pull origin master
     gem install rails --version=5.1.6
     bundle install
