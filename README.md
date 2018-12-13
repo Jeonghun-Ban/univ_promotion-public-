@@ -6,6 +6,7 @@
 
 
 ## 1. INFO
+![image](https://github.com/kbs4674/univ_promotion-public-/blob/master/public/img/hackerthon_poster(small).png?raw=true)
 #### 2018 UNIST × NAVER D2F × 멋쟁이 사자처럼 주관 해커톤
 #### [DEMO] http://univ-promotion.herokuapp.com
 
